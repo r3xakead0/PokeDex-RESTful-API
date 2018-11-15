@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "4e4e2812-e1ed-414b-a825-45d9ae314096",
+		"name": "PokeDex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Pokemons",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44311/api/Pokemons",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44311",
+							"path": [
+								"api",
+								"Pokemons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"imageUrl\": \"string\",\r\n  \"name\": \"string\",\r\n  \"type1\": \"string\",\r\n  \"type2\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44311/api/Pokemons",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44311",
+							"path": [
+								"api",
+								"Pokemons"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemons/:id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain, application/json, text/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44311/api/Pokemons/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44311",
+							"path": [
+								"api",
+								"Pokemons",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "001",
+									"description": "The Pokemon's Code"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemons/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"001\",\r\n  \"imageUrl\": \"string\",\r\n  \"name\": \"Pikaaaaa\",\r\n  \"type1\": \"string\",\r\n  \"type2\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44311/api/Pokemons/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44311",
+							"path": [
+								"api",
+								"Pokemons",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "001"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pokemons/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://localhost:44311/api/Pokemons/:id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44311",
+							"path": [
+								"api",
+								"Pokemons",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Folder for api"
+		}
+	]
+}
