@@ -25,9 +25,9 @@ namespace PokeDex.Controllers
         // GET: api/Pokemons
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<Pokemon>))]
-        public IEnumerable<Pokemon> GetPokemons()
+        public async Task<IEnumerable<Pokemon>> GetPokemons()
         {
-            return _context.Pokemons;
+            return await _context.Pokemons.ToListAsync();
         }
 
         // GET: api/Pokemons/5

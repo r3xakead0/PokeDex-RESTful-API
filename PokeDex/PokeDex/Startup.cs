@@ -33,11 +33,13 @@ namespace PokeDex
                 .AddXmlSerializerFormatters()
                 .AddXmlDataContractSerializerFormatters()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            
+
             //Registering Database Context
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=PokeDex;Trusted_Connection=True;ConnectRetryCount=0";
+            //var connection = @"Server=(localdb)\MSSQLLocalDB;Database=PokeDex;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Data Source=PokeDex.db";
+
             services.AddDbContext<PokemonDbContext>
-                (options => options.UseSqlServer(connection));
+                (options => options.UseSqlite(connection));
 
             // Register the Swagger generator
             services.AddSwaggerGen(c =>
