@@ -12,7 +12,7 @@ RUN dotnet publish -c Release -o /app
 # STAGE03 - Create the final image  
 FROM microsoft/dotnet:2.1-aspnetcore-runtime  
 WORKDIR /app  
-LABEL Author="Gaurav Gahlot"  
-LABEL Maintainer="quickdevnotes"  
+LABEL Author="Afu Tse"  
+LABEL Maintainer="pokedexapi"  
 COPY --from=publish /app .  
 ENTRYPOINT ["dotnet", "PokeDex.dll", "--server.urls", "http://*:80"]  
