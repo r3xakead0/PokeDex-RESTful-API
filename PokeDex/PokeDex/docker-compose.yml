@@ -3,8 +3,6 @@ services:
   app:
     container_name: docker-pokedexapi
     restart: always
-    build:
-        context: ./PokeDex
-        dockerfile: Dockerfile
+    build: .
     ports:
       - '8081:80'
