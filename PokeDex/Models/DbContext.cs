@@ -7,7 +7,9 @@ namespace PokeDex.Models
     {
         public PokemonDbContext(DbContextOptions<PokemonDbContext> options)
             : base(options)
-        { }
+        {
+            Database.EnsureCreated();
+        }
 
         public DbSet<Pokemon> Pokemons { get; set; }
 
